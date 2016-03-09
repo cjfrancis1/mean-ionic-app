@@ -1,0 +1,10 @@
+{
+  "environment": "production",
+  "host": "http://localhost:5000",
+  "dbURL": "mongodb://localhost/ionic-project",
+  "domain": "ionic-project.com",
+  "appFrontFacingName": "Ionic Project",
+  "jwtSecret": "zealotsOfStockholmUrn",
+  "sendGridUsername": "",
+  "sendGridPassword": ""
+}

@@ -1,0 +1,16 @@
+<ion-view title="User Profile">
+
+    <ion-content has-header="true" padding="true">
+
+        <div class="list list-inset">
+            <div class="item item-thumbnail">
+                <img ng-src="{{user.profilePic || 'https://placehold.it/100X100'}}" width="100"/>
+                <h2>{{user.firstName | capitalize}} {{user.lastName | capitalize}}</h2>
+                <a ng-click="openInAppBrowser('https://m.twitter.com/'+user.twitterHandle)"><i class="icon ion-social-twitter positive"></i> @{{user.twitterHandle}}</a>
+            </div>
+            <div class="item item-text-wrap"><h2>Bio</h2><p>{{user.bio}}</p></div>
+        </div>
+
+    </ion-content>
+
+</ion-view>

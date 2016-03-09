@@ -1,0 +1,76 @@
+<ion-view title="Register">
+    <ion-nav-bar class="bar-stable">
+        <ion-nav-back-button>Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content has-header="true" padding="true">
+        <div ng-controller="RegisterCtrl">
+            <div class="list list-inset">
+                <div class="item item-icon-left item-borderless item-text-wrap"
+                     ng-show="alerts.errors.length">
+                    <i class="icon ion-android-warning"></i>
+                    <h3 ng-repeat="error in alerts.errors">{{error}}</h3>
+                </div>
+                <div class="item item-icon-left item-borderless item-text-wrap"
+                     ng-show="alerts.success.length">
+                    <i class="icon ion-checkmark"></i>
+                    <h3 ng-repeat="successMessage in alerts.success">{{successMessage}}</h3>
+                </div>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">First Name</span>
+                    <input type="text" ng-model="data.first_name" placeholder="First Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" ng-model="data.last_name" placeholder="Last Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Email</span>
+                    <input type="email" ng-model="data.email"
+                           placeholder="Email">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-model="data.password"
+                           placeholder="Password">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Confirm Password</span>
+                    <input type="password" ng-model="data.confirm_password"
+                           placeholder="Confirm Password">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Twitter Username</span>
+                    <input type="text" ng-model="data.twitter_handle"
+                           placeholder="@twitter_username">
+                </label>
+            </div>
+            <button class="button button-block button-positive"
+                    ng-click="register()">Register</button>
+        </div>
+
+        <div ng-controller="EmailVerificationCtrl" class="padding-top">
+            <div class="list list-inset">
+                <h3>Resend Verification Email</h3>
+                <p>
+                    If you have already registered and you need to resend the link to verify your email address, enter your email address below and we will send you that link.
+                </p>
+                <div class="item item-icon-left item-borderless item-text-wrap"
+                     ng-show="alerts.errors.length">
+                    <i class="icon ion-android-warning"></i>
+                    <h3 ng-repeat="error in alerts.errors">{{error}}</h3>
+                </div>
+                <div class="item item-icon-left item-borderless item-text-wrap"
+                     ng-show="alerts.success.length">
+                    <i class="icon ion-checkmark"></i>
+                    <h3 ng-repeat="successMessage in alerts.success">{{successMessage}}</h3>
+                </div>
+                <label class="item item-input">
+                    <span class="input-label">Email</span>
+                    <input type="text" ng-model="data.email" placeholder="name@example.com">
+                </label>
+            </div>
+            <button class="button button-block button-positive"
+                    ng-click="sendVerificationEmail()">Resend Verification Email</button>
+        </div>
+    </ion-content>
+</ion-view>

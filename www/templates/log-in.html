@@ -1,0 +1,25 @@
+<ion-view title="Log in">
+    <ion-nav-bar class="bar-stable">
+        <ion-nav-back-button>Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content has-header="true" padding="true">
+        <div class="list list-inset">
+            <div class="item item-icon-left item-borderless item-text-wrap"
+                 ng-show="alerts.errors.length">
+                <i class="icon ion-android-warning"></i>
+                <h3 ng-repeat="error in alerts.errors">{{error}}</h3>
+            </div>
+            <label class="item item-input item-icon-right">
+                <i class="icon ion-email"></i>
+                <input type="email" ng-model="data.email" placeholder="Email">
+            </label>
+            <label class="item item-input item-icon-right">
+                <i class="icon ion-key"></i>
+                <input type="password" ng-model="data.password" placeholder="Password">
+            </label>
+        </div>
+        <button class="button button-block button-positive"
+                ng-click="logIn()">Log in</button>
+        <a ui-sref="forgot-password" class="positive button button-block button-clear">Forgot Password?</a>
+    </ion-content>
+</ion-view>
