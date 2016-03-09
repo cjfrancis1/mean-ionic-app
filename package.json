@@ -1,5 +1,5 @@
 {
-  "name": "ionic-project",
+  "name": "mean-ionic-project",
   "version": "1.0.0",
   "dependencies": {
     "bcryptjs": "^2.3.0",
