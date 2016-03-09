@@ -1,5 +1,7 @@
-node/config/
+node/config/development.json
+node/config/production.json
 node_modules/
 platforms/
 plugins/
 .idea/
+
